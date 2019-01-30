@@ -1,0 +1,750 @@
+/*
+Theme Name: Twenty Seventeen
+Theme URI: https://finfactory.in
+Author: IndiaWD
+Author URI: https://finfactory.in/
+Description: Child theme of twenty seventeen
+Version: 1.1
+License: GNU General Public License v2 or later
+Template: twentyseventeen
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@font-face {
+    font-family: 'Lincoln-ProximaNova-Light';
+    src: url('assets/fonts/Lincoln-ProximaNova-Light.eot');
+    src: local('☺'), url('assets/fonts/Lincoln-ProximaNova-Light.woff') format('woff'), url('assets/fonts/Lincoln-ProximaNova-Light.ttf') format('truetype'), url('assets/fonts/Lincoln-ProximaNova-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lincoln-ProximaNova-Reg';
+    src: url('fonts/Lincoln-ProximaNova-Reg.eot');
+    src: local('☺'), url('assets/fonts/Lincoln-ProximaNova-Reg.woff') format('woff'), url('assets/fonts/Lincoln-ProximaNova-Reg.ttf') format('truetype'), url('assets/fonts/Lincoln-ProximaNova-Reg.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lincoln-ProximaNova-Sbold';
+    src: url('fonts/Lincoln-ProximaNova-Sbold.eot');
+    src: local('☺'), url('assets/fonts/Lincoln-ProximaNova-Sbold.woff') format('woff'), url('assets/fonts/Lincoln-ProximaNova-Sbold.ttf') format('truetype'), url('assets/fonts/Lincoln-ProximaNova-Sbold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CAVIARDREAMS-BOLD';
+    src: url('fonts/CAVIARDREAMS_BOLD.eot');
+    src: local('☺'), url('assets/fonts/CAVIARDREAMS_BOLD.woff') format('woff'), url('assets/fonts/CAVIARDREAMS_BOLD.ttf') format('truetype'), url('assets/fonts/CAVIARDREAMS_BOLD.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CAVIARDREAMS-light';
+    src: url('fonts/CAVIARDREAMS.eot');
+    src: local('☺'), url('assets/fonts/CAVIARDREAMS.woff') format('woff'), url('assets/fonts/CAVIARDREAMS.ttf') format('truetype'), url('assets/fonts/CAVIARDREAMS.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/**common css start**/
+body {
+    font-family: 'Lincoln-ProximaNova-Reg', sans-serif;
+    padding: 0px;
+    font-size: 14px;
+}
+.row.text-flex {
+    display: flex;
+    align-items: center;
+}
+.row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+.no-padding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.padding-0 {
+    padding: 0;
+}
+.margin-10 {
+    margin: 10px 0px 0px;
+}
+.display-flex {
+display: flex;
+align-items: center;
+}
+h5, h6 {
+padding: 0;
+margin: 0;
+text-transform: initial;
+letter-spacing: normal;
+}
+a:hover {
+text-decoration: none;
+}
+.widget {
+    padding-bottom: 0;
+}
+/**common css end**/
+/*Top Header CSS Start*/
+.header-top {
+    padding: 15px 0px;
+    color: #007912;
+    background: #000;
+    font-size: 20px;
+}
+.header-phone {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.font-20 {
+    font-size: 20px;
+}
+/*.map-loc {
+    margin-left: 20px;
+}*/
+/*Top Header CSS End*/
+/***menu start**/
+.logo-menu-section {
+    position: fixed;
+    width: 100%;
+    top: 0;
+background: #fff;
+    z-index: 1111; 
+    padding-top: 5px;
+}
+.navigation-top {
+    background: none;
+}
+.menu-main-navigation-container {
+    /*height: 135px;*/
+    position: relative;
+}
+ul#top-menu {
+    
+}
+.main-navigation a {
+    font-family: "Lincoln-ProximaNova-Light", sans-serif;
+    letter-spacing: -0.6px;
+    color: #3f3f3f;
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 0 5px;
+}
+.main-navigation li.current_page_item a {
+    color: #2ccf52;
+    font-family: "Lincoln-ProximaNova-Sbold", sans-serif;
+    text-decoration: none;
+background-position: bottom;
+}
+.main-navigation a:hover {
+    text-decoration: none;
+}
+a.menu-scroll-down {
+    display: none;
+}
+.site-logo a {
+    padding: 0;
+}
+.site-navigation-fixed.navigation-top {
+    position: initial;
+    border: 0px;
+}
+.main-navigation > div > ul {
+    text-align: right;
+}
+.main-navigation ul li {
+    list-style: none;
+    display: inline;
+    padding: 13px 0px;
+}
+.main-navigation ul li.menu-item-has-children:before, .main-navigation ul li.menu-item-has-children:after, .main-navigation ul li.page_item_has_children:before, .main-navigation ul li.page_item_has_children:after {
+    right: 2em;
+}
+.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
+    left: 0;
+}
+.main-navigation ul ul a {
+    padding: 10px 20px;
+    width: 17em;
+    margin: 0;
+    /* text-align: center; */
+}
+.header-contact-list {
+    margin: 0;
+}
+.header-contact-list li {
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 25px;
+}
+.header-contact-list li a {
+    color: #3f3f3f;
+}
+.header-contact-list li a i {
+    margin-right: 5px;
+}
+/***menu end**/
+
+/****header start***/
+header {
+    background: #fff !important;
+}
+/****header end***/
+.fix-custombtn:before {
+    content: '';
+    background: url(assets/images/ph2.gif) no-repeat;
+    background-size: cover;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.fix-custombtn {
+    position: fixed;
+    top: 35%;
+    margin-top: 0px;
+    right: 0;
+    width: 75px;
+    padding: 10px 10px;
+    text-align: center;
+    background-color: #2ccf52;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;   
+} 
+.fix-custombtn:focus {
+    text-decoration: none;
+}
+.fix-custombtn:hover {
+    color: #fff;
+}
+.form-title {
+    background: #f58018;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 23px;
+}
+.form-content {
+    padding: 18px;
+}
+.form-content input[type="submit"] {
+    background-color: #f58018;
+    border: 2px solid #2ccf52;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 1em 5em;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+    margin-top: 5px; 
+}
+.request-form input[type="text"], .request-form input[type="email"], .request-form input[type="tel"], .request-form input[type="date"], .request-form textarea{
+    color: #666;
+    background: rgba( 255, 255, 255, 1.00 );
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    border: 1px solid #bbb;
+    -webkit-border-radius:
+    border-radius: 3px;
+    display: block;
+    padding: 10px 0px;
+    border-radius: 0;
+    border-bottom: 1px solid #d4d4d4 !important;
+    border: none;
+    background: transparent;
+    margin: 5px 0px;
+}
+.request-form textarea {
+    height: 60px;
+    resize: none;
+}
+.request-form input[type="date"] {
+    text-transform: uppercase;
+    margin: 0px;
+}
+span.wpcf7-list-item {
+    margin: 10px 18px 0px 0px;
+}
+/* Banner Section CSS Start*/
+.home-banner {
+    margin-top: 60px;
+}
+.rSlider_1.css-transitions {
+    margin: 0px auto !important;
+    max-width: 100% !important;
+}
+.about-heading {
+    font-size: 50px;
+    /*border-bottom: 5px solid #000;*/
+    /*max-width: 24%;*/
+    text-decoration: underline;
+    margin: 25px auto;
+}
+.about-content {
+    padding: 1em 1em;
+    line-height: 25px;
+    font-size: 20px;
+}
+.blog-section {
+    background: #f3f3f3;
+    padding-bottom: 30px; 
+}
+.blog-more-btn {
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 50px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.all-posts {
+    padding-top: 1em;
+    text-align: justify;
+}
+.all-posts .blog-content {
+    padding: 1em 0em;
+}
+.home-page-blog {
+    text-align: center;
+}
+/* Banner Section CSS End*/
+/* Footer CSS Start */
+.copyright-section {
+    padding: 20px 0px 10px;
+    background-color: #000;
+}
+.font-white {
+    color: #fff !important;
+    text-decoration: none;
+}
+.font-white:hover {
+    color: #3f3f3f !important;
+    text-decoration: none;
+}
+#heart {
+    color: red;
+}
+.copyright-section a {
+    color: #f77705;
+    /*font-size: 25px;*/
+    font-weight: 700;
+}
+.copyright-content {
+    color: #fff;
+    font-family: "Lincoln-ProximaNova-Light", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.social-icons-list {
+    margin: 10px;
+}
+.social-icons-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 30px;
+}
+.social-icons-list li i {
+    font-size: 25px;
+    color: #fff;
+}
+.footer-contact-section {
+    background: #3f3f3f;
+    padding: 50px 0px;
+}
+.footer-contact-section input[type="text"], .footer-contact-section input[type="email"], .footer-contact-section input[type="tel"], .footer-contact-section textarea {    color: #666;
+    background: #fff;
+     background-image:none; 
+    border: none;
+    -webkit-border-radius: 3px;
+    border-radius: 0;
+    display: block;
+    padding: 0.7em;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.footer-contact-section textarea {
+    height: 149px;
+    resize: none;
+}
+.footer-contact-section .popup_form_btn {
+    font-size: 18px;
+    padding: 10px 70px;
+    border: 1px solid #ea1919;
+}
+/* Footer CSS End */
+/* Blog Inner CSS Start */
+.page-id-7 .logo-menu-section {
+    border-bottom: 2px solid #017611;
+}
+.blog-post {
+    margin-top: 70px;
+}
+.blog-hr {
+    border-top: 2px solid #017611;
+}
+.more-link {
+    color: #fff;
+    background: #2ccf52;
+    padding: 5px 20px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.more-link:focus {
+    color: #fff;
+}
+.innerpage-top-banner {
+    height: 340px;
+}
+.page-id-9 .innerpage-top-banner {
+    display: flex;
+    align-items: center;
+}
+.page-id-9 .about-heading {
+    /*border-bottom: 5px solid #ccc;
+    max-width: 23%;*/
+    color: #ccc;
+}
+.text-justify {
+    text-align: justify;
+}
+.inner-blog-heading {
+    font-size: 40px;
+    font-weight: 700;
+}
+.inner-blog-content h5 {
+    font-size: 24px;
+    padding-top: 0.6em;
+}
+.inner-blog-content p {
+    padding-top: 1em;   
+}
+.inner-blog-content p b, .inner-blog-content p  strong {
+    font-size: 18px;
+}
+.blog-thumb {
+    background-size: cover;
+    height: 170px;
+}
+.blog-title {
+    font-size: 25px;
+    margin-bottom: 0.5em;
+}
+/* #comments.comments-area {
+    display: none;
+} */
+/* Blog Inner CSS End */
+.section-page {
+    padding: 20px 0px;
+}
+.inner-blog-content table  {
+    height: 1959px;
+    width: 560px;
+    margin: auto;
+    margin-top: 50px; 
+}
+.inner-blog-content table, .inner-blog-content th, .inner-blog-content td {
+    border: 1px solid #f3f3f3;
+}
+.inner-blog-content th, .inner-blog-content td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*Wealth Page CSS Start*/
+.wealth-page-section {
+    padding-bottom: 40px;
+}
+.wealth-questions {
+    background: #2ccf52;
+    text-align: left;
+    line-height: 50px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.wealth-questions p , .wealth-qotes p {
+    margin: 0;
+}
+.wealth-contain-body {
+    background-color: #f8f8f8;
+    border: 1px solid #a1a1a1;
+    border-top: 0px;
+    padding: 30px 30px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.wealth-qotes {
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 2px 6px 19px 0 rgba(0,0,0,.37);
+    -moz-box-shadow: 2px 6px 19px 0 rgba(0,0,0,.37);
+     box-shadow: 2px 6px 19px 0 rgba(0,0,0,.37); 
+    font-size: 18px;
+    margin-bottom: 30px;
+    transition: 0.7s;
+}
+.wealth-qotes:hover {
+    box-shadow: 0 5px 10px rgba(50,50,93,.13), 0 5px 20px rgba(0,0,0,.16);
+    margin-top: -5px;
+}
+.wealth-qotes i {
+    font-size: 30px;
+    color: #ccc;
+    margin: 0px 20px;
+}
+.wealth-answers {
+    padding: 0px 20px;
+    font-size: 18px;
+}
+.wealth-inner-images {
+    max-width: 50%;
+    margin: 10px 0px;
+}
+.wealth-answers strong {
+    font-size: 24px;
+}
+
+/*Wealth Page CSS End*/
+
+
+/************responsive css start**********/
+@media only screen and ( min-width: 1200px ) and ( max-width: 1440px ) {
+    /*Home Page Responsive CSS Start*/
+    .about-heading {
+        font-size: 45px;
+        /*max-width: 20%;
+        border-bottom: 3px solid #000;*/
+    }
+    .main-navigation a {
+        font-size: 17px;
+    }
+    .about-content {
+        line-height: 22px;
+        font-size: 16px;
+    }
+    .blog-section .about-heading {
+        max-width: 15%;
+    }
+    .blog-title {
+        font-size: 22px;
+        margin-bottom: 0.5em;
+    }
+    .blog-content p {
+        font-size: 1em;
+    }
+    .blog-more-btn {
+        font-size: 17px;
+        padding: 5px 30px;
+    }
+    .footer-contact-section {
+        padding: 30px 0px;
+    }
+    .copyright-section {
+        padding: 10px 0px 10px;
+    }
+    .footer-contact-section input[type="text"], .footer-contact-section input[type="email"], .footer-contact-section input[type="tel"], .footer-contact-section textarea {    color: #666;
+        padding: 0.5em;
+    }
+    .footer-contact-section textarea {
+        height: 131px;
+    }
+    .footer-contact-section .popup_form_btn {
+        font-size: 15px;
+        padding: 10px 50px;
+    }
+    /*Home Page Responsive CSS END*/
+    /*Blog Page Responsive CSS Start*/
+    .blog-post {
+        margin-top: 60px;
+    }
+    /*Blog Page Responsive CSS END*/
+    /*Contact Us Page Responsive CSS Start*/
+    .page-id-9 .about-heading {
+        /*border-bottom: 4px solid #ccc;
+        max-width: 25%;*/
+    }
+    span.wpcf7-list-item {
+        margin: 10px 10px 0px 0px;
+    }
+}
+@media only screen and ( min-width: 992px ) and ( max-width: 1200px ) {
+    .about-heading {
+        font-size: 40px;
+        max-width: 18%;
+    }
+    span.wpcf7-list-item {
+        margin: 10px 10px 0px 0px;
+    }
+    #popmake-80 {
+        top: 40px !important;
+    }
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 992px ) {
+    .main-navigation a {
+        font-size: 15px;
+        padding: 5px 15px;
+    }
+    .about-heading {
+        font-size: 40px;
+        border-bottom: 4px solid #000;
+        max-width: 25%;
+    }
+    .about-content {
+        padding: 0;
+        line-height: 23px;
+        font-size: 17px;
+    }
+    .about-us-section {
+        padding: 10px 0px;
+    }
+    span.wpcf7-list-item {
+        margin: 0px 10px 0px 0px;
+    }
+    #popmake-80 {
+        top: 40px !important;
+    }
+}
+@media only screen and ( min-width: 767px ) and ( max-width: 768px ) {
+    .about-heading {
+        font-size: 40px;
+        max-width: 25%;
+    }
+    .all-posts {
+        text-align: center;
+    }
+    .text-center-xs {
+        text-align: center;
+    }
+    .about-content {
+        padding: 0px;
+        line-height: 22px;
+        font-size: 15px;
+    }
+    span.wpcf7-list-item {
+        margin: 0px 10px 0px 0px;
+    }
+    #popmake-80 {
+        top: 50px !important;
+    }
+    .page-id-9 .about-heading {
+        border-bottom: 3px solid #ccc;
+        max-width: 33%;
+    }
+}
+@media only screen and ( max-width: 767px ) {
+    .display-none-xs {
+        display: none;
+    }
+    .row.text-flex {
+        display: block;
+    }
+    .text-center-xs {
+        text-align: center; 
+    }
+    .about-heading {
+        font-size: 35px;
+        border-bottom: 3px solid #000;
+        max-width: 32%;
+    }
+    .header-logo {
+        max-width: 49%;
+    }
+    .home-banner {
+        margin-top: 120px;
+    }
+    .about-content {
+        padding: 1em;
+        line-height: 20px;
+        font-size: 15px;
+        text-align: center; 
+    }
+    .all-posts {
+        text-align: center;
+    }
+    span.wpcf7-list-item {
+        margin: 0px 10px 0px 0px;
+    }
+    #popmake-80 {
+        top: 50px !important;
+    }
+    .blog-post {
+        margin-top: 140px;
+        text-align: center; 
+    }
+    .blog-thumb {
+        margin-bottom: 20px;
+    }
+    .footer-contact-section {
+        padding: 50px 0px 30px;
+    }
+    .inner-blog-content {
+        text-align: center;
+    }
+    .inner-blog-heading {
+        font-size: 30px;
+    }
+    .innerpage-top-banner {
+        margin-top: 120px;
+    }
+    .page-id-9 .about-heading {
+        border-bottom: 3px solid #ccc;
+        max-width: 100%;
+    }
+}
+@media only screen and ( max-width: 480px ) {
+    .home-banner {
+        margin-top: 90px;
+    }
+    #popmake-80 {
+        width: 300px !important;
+        top: 40px !important;
+        margin: auto !important;
+    }
+    .fix-custombtn {
+        width: 50px;
+        font-size: 10px;
+    }
+    .fix-custombtn:before {
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+    }
+}
+@media only screen and ( max-width: 426px ) {
+    .home-banner {
+        margin-top: 110px;
+    }
+    .about-heading {
+        font-size: 30px;
+        border-bottom: 3px solid #000;
+        max-width: 50%;
+    }
+    span.wpcf7-list-item {
+        margin: 0px 15px 0px 0px;
+    }
+    .footer-contact-section {
+        padding: 40px 0px 20px;
+    }
+    .header-logo {
+        max-width: 70%;
+    }
+    button#responsive-menu-button {
+        top: 45px !important;
+    }
+}
+/************responsive css end**********/
